@@ -16,3 +16,11 @@
   "MSBuild.exe" WebApp45.sln /t:Rebuild
   "SonarScanner.MSBuild.exe" end /d:sonar.login="<token>"
   ```
+
+-- The .NET Core version can also be used as a .NET Core Global Tool. 
+  ```dos
+dotnet tool install --global dotnet-sonarscanner
+dotnet sonarscanner begin /k:"project-key"  /d:sonar.login="myAuthenticationToken"
+dotnet build <path to solution.sln>
+dotnet sonarscanner end /d:sonar.login="myAuthenticationToken"
+    ```
