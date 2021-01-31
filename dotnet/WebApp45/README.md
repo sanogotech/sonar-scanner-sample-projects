@@ -20,7 +20,7 @@
 -- The .NET Core version can also be used as a .NET Core Global Tool. 
   ```dos
 dotnet tool install --global dotnet-sonarscanner
-dotnet sonarscanner begin /k:"project-key"  /d:sonar.login="myAuthenticationToken"
+dotnet sonarscanner begin /k:"dotnetwebapp45"  /d:sonar.login="admin"    /d:sonar.password="admin"  /d:sonar.host.url="http://localhost:9000"  /d:sonar.exclusions="Scripts/**"
 dotnet build <path to solution.sln>
 dotnet sonarscanner end /d:sonar.login="myAuthenticationToken"
     ```
